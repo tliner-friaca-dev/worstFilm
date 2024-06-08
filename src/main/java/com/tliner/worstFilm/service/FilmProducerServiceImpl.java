@@ -117,7 +117,7 @@ public class FilmProducerServiceImpl implements FilmProducerService {
         });
 
         producerYearsMinAndMaxIntervalDTOList.forEach( producerYears -> {
-            producerYears.getIntervalMin().forEach( max -> {
+            producerYears.getIntervalMax().forEach( max -> {
                 producerDTOMaxList.add(new ProducerDTO(producerYears.getProducers(), max.getInterval(), max.getPreviousWin(), max.getFollowingWin()));
             });
         });
